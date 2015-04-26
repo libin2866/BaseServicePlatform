@@ -119,16 +119,16 @@ a.thumb {
 	padding: 0px;/*2px*/
 	display: block;
 	width: 104px;
-	height: 106px;
+	height: 104px;
 	line-height: 100px;
 	vertical-align: middle;
 	text-align: center;
-	/*border: 1px solid #ccc;*/
+
 }
 ul.thumbs li.selected a.thumb {
 	background: #ededed;
-	border:2px solid #ededed;
-	border-radius: 2px;
+	border:2px solid #ededed;/**/
+
 }
 a.thumb:focus {
 	outline: none;
@@ -140,16 +140,18 @@ a.thumb:hover {
 ul.thumbs img {
 	border: none;
 	display: inline-block;/*block*/
+	margin-top: -4px;
 }
 div.pagination {
 	clear: both;
 }
 div.navigation div.top {
 	margin-bottom: 18px;
-	height: 11px;
+	/*height: 11px;*/
 }
 div.navigation div.bottom {
 	margin-top: 12px;
+	display: block;
 }
 div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
 	display: block;

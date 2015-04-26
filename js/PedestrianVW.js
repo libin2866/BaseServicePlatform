@@ -94,8 +94,8 @@ function PicAdjustforplugin(){
 function  AddPicturesToDOM(surl,burl,picTitle){
 
     //var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img src="'+surl+'" alt="'+picTitle+'/></a><div class="image-title">'+picTitle+'</div></div> </li>';
-    var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img class="img-size-control" src="'+surl+'" alt="'+picTitle+'/></a><div class="image-title"></div></div> </li>';
-    console.log(htmlcode);
+    var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img class="img-size-control" src="'+surl+'" alt="'+picTitle+'/></a><div class="caption"><div class="image-title"></div><div class="image-desc"></div></div></li>';
+    //console.log(htmlcode);
     $("#thumbsUl").append(htmlcode);
 }
 
@@ -105,13 +105,14 @@ function renderPics(jsonStr){
 	var surl,burl,picTitle;
     var thumbUl=$("#thumbsUl");
 
-	for(var i=0;i<5;++i){
+	for(var i=0;i<jsonStr.length;++i){
 		var path=jsonStr[i];
 		surl="img/"+path['img'];
 		//console.log(jsonStr[i]['img'])
 		burl="img/"+path['img'];
-		picTitle="";
-        var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img src="'+surl+'" alt="'+picTitle+'/></a><div class="image-title"></div></div> </li>';
+		picTitle=path['img'];
+      //  var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img src="'+surl+'" alt="'+picTitle+'/></a><div class="image-title"></div></div> </li>';
+        var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img class="img-size-control" src="'+surl+'" alt="'+picTitle+'/></a><div class="caption"><div class="image-title"></div><div class="image-desc"></div></div></li>';
         thumbUl.append(htmlcode);
 		//AddPicturesToDOM(surl,burl,picTitle);
 

@@ -117,7 +117,7 @@ ul.thumbs li {
 }
 a.thumb {
 	padding: 0px;/*2px*/
-	display: block;
+	display: table-cell;
 	width: 104px;
 	height: 104px;
 	line-height: 100px;

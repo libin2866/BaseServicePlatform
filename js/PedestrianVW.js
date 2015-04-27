@@ -94,7 +94,7 @@ function PicAdjustforplugin(){
 function  AddPicturesToDOM(surl,burl,picTitle){
 
     //var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img src="'+surl+'" alt="'+picTitle+'/></a><div class="image-title">'+picTitle+'</div></div> </li>';
-    var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img class="img-size-control" src="'+surl+'" alt="'+picTitle+'/></a><div class="caption"><div class="image-title"></div><div class="image-desc"></div></div></li>';
+    var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img class="img-size-control" src="'+surl+'" alt="'+picTitle+'"/></a></li>';
     //console.log(htmlcode);
     $("#thumbsUl").append(htmlcode);
 }
@@ -112,7 +112,7 @@ function renderPics(jsonStr){
 		burl="img/"+path['img'];
 		picTitle=path['img'];
       //  var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img src="'+surl+'" alt="'+picTitle+'/></a><div class="image-title"></div></div> </li>';
-        var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img class="img-size-control" src="'+surl+'" alt="'+picTitle+'/></a><div class="caption"><div class="image-title"></div><div class="image-desc"></div></div></li>';
+        var htmlcode='<li><a class="thumb" href="'+burl+'"title="'+picTitle+'"><img class="img-size-control" src="'+surl+'" alt="'+picTitle+'"/></a><div class="caption"><div class="image-title"></div><div class="image-desc"></div></div></li>';
         thumbUl.append(htmlcode);
 		//AddPicturesToDOM(surl,burl,picTitle);
 
@@ -122,6 +122,8 @@ function renderPics(jsonStr){
 
 	//
 }
+
+
 
 (function fillUpImg(){
     function fill() {
